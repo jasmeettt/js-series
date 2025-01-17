@@ -37,7 +37,7 @@ const hundreds = 1000000;
  console.log(Math.random());
  console.log(Math.random()*10 + 1); // This assures that values are atleast 1 & more than 
  console.log(Math.floor((Math.random()*10)+1));// To avoid any BODMAS rule miscalculation
- 1
+ 
  const min = 100;
  const max = 200;
  

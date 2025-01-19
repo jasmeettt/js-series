@@ -20,10 +20,31 @@ function sayMyName (){
 
 
 function addTwoNumbers (num1,num2){ 
-    let result = num1+num2;
-    return result;
+    // let result = num1+num2;  // one way of doing
+    // return result;
+
+    return num1+ num2;
 } 
 
 
-const result = addTwoNumbers(2,5);
-console.log("result: ", result);
+const result = addTwoNumbers(2,15);
+// console.log("result: ", result);
+
+
+function loginUserMessage(username){
+    // if(username === undefined){
+    //     console.log("please enter Real Value"); // way of writing 
+    //     return;
+        
+    // }
+    
+    if(!username){ // can also be written like this
+        console.log("please enter Real Value");
+        return;
+        
+    }
+    return `${username} just logged in`
+}
+
+// console.log(loginUserMessage("Jasmeet"));
+console.log(loginUserMessage());

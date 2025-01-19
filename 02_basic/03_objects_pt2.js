@@ -50,5 +50,15 @@ const user = [
 //console.log(Object.values(tinderUser)); // return only the values
 //console.log(Object.entries(tinderUser)); // puts every key values into arrays
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
 
+const course = {
+    courseName : "JS in hindi",
+    price : "999", 
+    courseTeacher : "hitesh"
+}
+
+// course.courseTeacher
+
+const {courseTeacher: inst} = course; // we make a empty obj and  
+console.log(inst);

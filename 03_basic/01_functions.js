@@ -31,7 +31,7 @@ const result = addTwoNumbers(2,15);
 // console.log("result: ", result);
 
 
-function loginUserMessage(username){
+function loginUserMessage(username /*= "sam"*/){ // we can use  this (eg: sam ) as a default value
     // if(username === undefined){
     //     console.log("please enter Real Value"); // way of writing 
     //     return;
@@ -46,5 +46,5 @@ function loginUserMessage(username){
     return `${username} just logged in`
 }
 
-// console.log(loginUserMessage("Jasmeet"));
+console.log(loginUserMessage("Jasmeet"));
 console.log(loginUserMessage());

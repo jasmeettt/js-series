@@ -11,7 +11,7 @@ function sayMyName (){
 // sayMyName(); 
 // without the brackets its just the reference of the function so it wont show up on the log
 
-// function addTwoNumbers (num1,num2){ // this bracketsare called parameters
+// function addTwoNumbers (num1,num2){ // this brackets are called parameters
 //     console.log((num1)+(num2));
     
 // } 

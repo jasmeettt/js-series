@@ -47,4 +47,32 @@ function loginUserMessage(username /*= "sam"*/){ // we can use  this (eg: sam ) 
 }
 
 console.log(loginUserMessage("Jasmeet"));
-console.log(loginUserMessage());
+// console.log(loginUserMessage());
+
+
+function calcCartPrice(...num1){
+    return num1;
+}
+
+console.log(calcCartPrice(200,300,400))
+
+const user = {
+    useranme: "hitesh",
+    price : 122,
+}
+
+function handleObject (any){
+    return (`${any.username} is the name and ${any.price} is the course fees`)
+}
+
+console.log(handleObject(user))
+console.log(handleObject({username : "hero", price : 123}))
+
+
+const myNewArray =[200, 300, 400,500]
+
+function secondValue(any){
+return any[1];
+}
+
+console.log(secondValue(myNewArray))

@@ -31,6 +31,16 @@ let val1;
 val1 = 5 ?? 10; //output 5
 val1 = null ?? 10; //output 10
 val1 = undefined ?? 10; //output 10
+val1 = null ?? 10 ?? 20; // takes the first values after null/undefined // output 10
 console.log(val1);
+
+// Terniary Operator
+
+// condition ? true : false
+
+const iceTeaPrice = 100;
+iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80");
+
+
 
 

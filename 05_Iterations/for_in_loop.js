@@ -5,9 +5,12 @@ const myObj = {
     py : "pyhton"
 }
 
-for (const key in object) {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-        const element = object[key];
-        
-    }
+for (const key in myObj) {
+    // console.log(`${key} is shortcut for ${myObj[key]}`);
+}
+
+
+const myArr = ["js","cpp","ruby"];
+for (const key in myArr) {
+    console.log(myArr[key]);
 }

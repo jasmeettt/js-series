@@ -6,12 +6,12 @@ const loggeInFromGoogle = false;
 const loggeInFromEmail = true;
 
 
-// if (userLoggedIn && debitCard){
-//     console.log("allow to buy course");
+if (userLoggedIn && debitCard){
+    console.log("allow to buy course");
     
-// }
+}
 
-// if (loggeInFromEmail || loggeInFromGoogle) {
-//     console.log(`user logged IN`)
-// }
+if (loggeInFromEmail || loggeInFromGoogle) {
+    console.log(`user logged IN`)
+}
 

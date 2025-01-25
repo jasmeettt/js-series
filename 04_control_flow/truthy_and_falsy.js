@@ -24,3 +24,13 @@ if (Object.keys(empObj).length === 0){
     console.log("obj is empty");
     
 }
+
+// Nullish Coalescing Operator (??) : Null, Undefined
+
+let val1;
+val1 = 5 ?? 10; //output 5
+val1 = null ?? 10; //output 10
+val1 = undefined ?? 10; //output 10
+console.log(val1);
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai and DOM</title>
+</head>
+<body style= "background-color: #1a1a1a; color: white;">
+    <div class="parent">
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+        <div class="day">Sun</div>
+    </div>
+</body>
+<script>
+    const parent =document.querySelector(".parent");
+    // console.log(parent.children[0].innerHTML);
+
+    for (let i = 0; i < parent.children.length; i++) {
+        //   console.log(parent.children[i].innerHTML);
+        
+    }    
+
+const arr = Array.from(parent.children);
+// console.log(arr)
+for (let i = 0; i < parent.children.length; i+=2) {
+     const b = parent.children[i].style.color="red";
+    //  console.log(b)
+    }
+
+// console.log(parent.firstElementChild)
+
+const f = document.querySelector('.day');
+// console.log(f);
+// console.log(f.parentElement);
+// console.log(f.nextElementSibling);
+
+console.log("nodes:",parent.childNodes);
+
+
+</script>
+</html>

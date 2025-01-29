@@ -5,9 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chai aur DOM</title>
 </head>
-<body style = "background-color: #1a1a1a; color: whitesmoke; font-size: 18px;">
+<body style = "background-color: #1a1a1a; color: whitesmoke; font-size: 26px;">
     <ul class="language">
         <li>JavaScript</li>
     </ul>
 </body>
+<script>
+    function addLanguage(lang){
+    const li = document.createElement('li');  
+    li.innerHTML = lang // this method is good but can only be used in smaller projects as it traverse the tree to find the text which may be a problem in large data
+    document.querySelector('.language').appendChild(li);
+    }
+    addLanguage("Python");
+    addLanguage("Typescript");
+
+    function addOptiLang (lang){
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(lang)); // this is a optimized way to add text as it does not traverses the tree
+        document.querySelector("ul").appendChild(li);
+    }
+    addOptiLang("Golang");
+
+
+    //Editing DOM
+
+    const last =document.querySelector("li:last-child");
+    // last.innerHTML= "mojo" // not that optimized for large data
+    const newli = document.createElement("li");
+    newli.textContent= "Ruby";
+    last.replaceWith(newli);
+
+    const first = document.querySelector("li:first-child");
+    first.outerHTML= "<h1>Javascipt</h1>" // can also change with outerHTML, it changes the whole element
+
+    // removing DOM
+
+    const second = document.querySelector("li:nth-child(2)");
+    second.remove()
+</script>
 </html>

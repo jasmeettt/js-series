@@ -14,8 +14,40 @@
             <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
             <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+            <li><a style="color: aliceblue;" href="https://google.com" target="_blank"id="google">Google</a></li>
         </ul>
    </div>
 </body>
+<script>
+    // Events run sequentially in javascript
+
+    // document.getElementById('owl').onclick = ()=>{
+    //     alert("owl")
+    // }
+
+    // AttachEvent() // was used in eariler times.
+    // jQuery - on
+
+    // to learn more about:
+    // type, timestamp, defaultprevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftKey, keyCode
+
+
+    document.getElementById('images').addEventListener("click", function (e){
+        console.log("Images Clicked");
+        
+    },false)    
+    document.getElementById('owl').addEventListener("click", function (e){
+        console.log("Owl Clicked");
+        e.stopPropagation()
+    },false)
+    // ⬆️ event propagation: false = Bubbling (bottom to top)
+    //true = Capturing (top to bottom) 
+    document.getElementById("google").document.addEventListener("click",(e)=>{
+        console.log("google clicked");
+        e.preventDefault();
+    },false)
+</script>
 </html>

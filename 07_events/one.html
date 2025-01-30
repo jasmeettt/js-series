@@ -35,19 +35,38 @@
     // altKey, ctrlKey, shiftKey, keyCode
 
 
-    document.getElementById('images').addEventListener("click", function (e){
-        console.log("Images Clicked");
+    // document.getElementById('images').addEventListener("click", function (e){
+    //     console.log("Images Clicked");
         
-    },false)    
-    document.getElementById('owl').addEventListener("click", function (e){
-        console.log("Owl Clicked");
-        e.stopPropagation()
-    },false)
+    // },false)  
+
+    // document.getElementById('owl').addEventListener("click", function (e){
+    //     console.log("Owl Clicked");
+    //     e.stopPropagation()
+    // },false)
+
     // ⬆️ event propagation: false = Bubbling (bottom to top)
     //true = Capturing (top to bottom) 
-    document.getElementById("google").document.addEventListener("click",(e)=>{
-        console.log("google clicked");
-        e.preventDefault();
-    },false)
+
+    // document.getElementById("google").addEventListener("click",(e)=>{
+    //     e.stopPropagation();
+    //     e.preventDefault();
+    //     console.log("google clicked");
+    // })
+
+    document.querySelector("#images").addEventListener(
+        "click",(e)=>{
+            if (e.target.tagName === "IMG") { // this is used to target only the IMG (tagName function)
+                console.log(e.target.id)
+                let removeIt = e.target.parentNode;
+                removeIt.remove() // first approach
+            }
+            // console.log(e.target.id); // this givs the id of the targeted element
+            // console.log(e.target.parentNode);
+            // let removeIt = e.target.parentNode;
+            // removeIt.remove() // first approach
+            // removeIt.parentNode.removeChild(removeIt); // second approach
+        },false
+    )
 </script>
 </html>

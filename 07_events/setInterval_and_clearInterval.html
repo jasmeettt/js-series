@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai ur code</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+    // const dateTime = (str)=>{
+    //     console.log(str, Date.now())
+    // };
+    // let intervalId;
+    // document.querySelector("#start").addEventListener("click",function(){
+    //      intervalId = setInterval(dateTime, 1000, "hello");
+    // })
+    // const stop = document.querySelector("#stop").addEventListener("click",function(e){
+    //     intervalId = clearInterval(intervalId);
+    // })
+
+
+    // Project 5 Random background changer.
+const start =document.querySelector("#start");
+const stop = document.querySelector("#stop");
+
+function getRGBA() {
+    let random1 = Math.floor(Math.random() * 255);
+    let random2 = Math.floor(Math.random() * 255);         // my way of doing the project
+    let random3 = Math.floor(Math.random() * 255);
+    return `rgba(${random1},${random2},${random3})`;
+}
+const randomColor = function(){
+let hex = '0123456789ABCDEF'; 
+let color = "#"                                           // Hitesh Sir's way of doing
+for(let i =0; i<=5; i++){
+    color += hex[(Math.floor(Math.random()*16))]; 
+}
+return color;
+};
+// console.log(randomColor())
+
+let interval;
+start.addEventListener('click', function(){ 
+    if(!interval){               // this is helping flush the data so the stop button works.
+        interval = setInterval(()=>{
+    // document.body.style.backgroundColor = getRGBA();    // my way
+    document.body.style.backgroundColor = randomColor();  // sir's way
+    },500)
+    }
+})
+stop.addEventListener("click",()=>{
+    clearInterval(interval);
+    interval = null;           // flushing out the data that has been stored in interaval variable.(but refernce dena is necessary therefore, wegiving ref up where the settimeinterval is)
+})
+</script>
+</html>

@@ -61,7 +61,7 @@ async function consumePromiseFive(){
         const response = await promiseFive;
     console.log(response);
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }
 consumePromiseFive();
@@ -72,7 +72,7 @@ async function allUser() {
     const jsonplaceholder = await (response).json();
     console.log(jsonplaceholder);
     } catch (error) {
-        console.log("E: ", error)
+        console.log("E: ", error);
     }
 }
 

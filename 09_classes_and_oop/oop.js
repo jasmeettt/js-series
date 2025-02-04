@@ -1,4 +1,4 @@
-const user ={        // thsi is object literal
+const user ={        // this is object literal
     username : "jasmeet",
     loginCount : 8,
     signedIn : true,

@@ -46,7 +46,7 @@ function loginUserMessage(username /*= "sam"*/){ // we can use  this (eg: sam ) 
     return `${username} just logged in`
 }
 
-console.log(loginUserMessage("Jasmeet"));
+// console.log(loginUserMessage("Jasmeet"));
 // console.log(loginUserMessage());
 
 
@@ -54,7 +54,7 @@ function calcCartPrice(...num1){
     return num1;
 }
 
-console.log(calcCartPrice(200,300,400))
+// console.log(calcCartPrice(200,300,400))
 
 const user = {
     useranme: "hitesh",
@@ -65,8 +65,8 @@ function handleObject (any){
     return (`${any.username} is the name and ${any.price} is the course fees`)
 }
 
-console.log(handleObject(user))
-console.log(handleObject({username : "hero", price : 123}))
+// console.log(handleObject(user))
+// console.log(handleObject({username : "hero", price : 123}))
 
 
 const myNewArray =[200, 300, 400,500]
@@ -75,4 +75,24 @@ function secondValue(any){
 return any[1];
 }
 
-console.log(secondValue(myNewArray))
+// console.log(secondValue(myNewArray))
+
+// udemy 
+
+function orderTea (teatype){
+    function confirmOrder (){
+        return ` order confirmed for ${teatype}`
+    }
+    return confirmOrder()
+}
+
+const yourOrder = orderTea("Black tea")
+// console.log(yourOrder);
+
+
+const calculateTotal = (price, quantity) => price * quantity; // this is how we write a single line function.(called as implict retrun)
+
+let totalCost = calculateTotal (234,2);
+// console.log(totalCost);
+
+

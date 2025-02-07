@@ -96,3 +96,22 @@ let totalCost = calculateTotal (234,2);
 // console.log(totalCost);
 
 
+function makeTea(tea){
+    return ` your tea is ${tea}`
+}
+ function processTeaOrder(teaFn){          // this is a function taken as a parameter inside a function , this is called as ([{First class function}])
+    return teaFn("earl grey")
+ }
+
+let order =  processTeaOrder(makeTea);
+// console.log(order)
+
+function createTeaMaker(name){
+    return function(tea){
+        return `making ${tea} ${name}`
+    }                                               // this is explaining more about scopes
+}
+let teaMaker = createTeaMaker("jasmeet");
+let teas = teaMaker("green Tea")
+
+console.log(teas)

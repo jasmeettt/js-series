@@ -23,3 +23,10 @@ class Teacher extends user {
 const peo = new Teacher("people","people@Hm.com","123");
 peo.logMe()
 // console.log(peo.createId()) 
+
+
+class Calculator {
+    static add (a,b){
+        return a+b;
+    }
+}

@@ -25,7 +25,7 @@ document.getElementById('addNewItem').addEventListener("click",function(){
 //challenge 5
 document.getElementById('removeLastTask').addEventListener("click", function(){
     const taskList = document.getElementById('taskList')
-    taskList.firstElementChild.remove()
+    taskList.lastElementChild.remove()
 })
 
 

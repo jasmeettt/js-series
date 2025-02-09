@@ -28,4 +28,34 @@ document.getElementById('removeLastTask').addEventListener("click", function(){
     taskList.lastElementChild.remove()
 })
 
+//challenge 6 
+document.getElementById("clickMeButton").addEventListener('mouseover',function (){
+    alert("Mouse got hovered this button")
+})
 
+//challenge 7
+document.getElementById('teaList').addEventListener("click",function(e){
+    if (e.target && e.target.matches('.teaItem')) {
+        alert("you selected "+ e.target.textContent)
+    }
+})
+
+//challenge 8
+document.getElementById('feedbackForm').addEventListener("submit",function(e){
+    e.preventDefault();
+    const feedback = document.getElementById('feedbackInput').value
+    // console.log(feedback)\
+    document.getElementById('feedbackDisplay').innerHTML = feedback;
+})
+
+//challenge 9
+document.addEventListener("DOMContentLoaded",function(){
+    document.getElementById('domStatus').textContent ="DOM fully loaded"
+})
+
+// challenge 10
+document.getElementById('toggleHighlight').addEventListener("click", function(){
+    let text = document.getElementById('descriptionText')
+    // console.log(text)
+    text.classList.toggle('highlight')
+})
